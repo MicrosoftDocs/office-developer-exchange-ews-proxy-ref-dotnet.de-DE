@@ -1,0 +1,138 @@
+<Type Name="CalendarItemCreateOrDeleteOperationType" FullName="ExchangeWebServices.CalendarItemCreateOrDeleteOperationType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="4b6a73065f86326b9228c8fbeaad815520744678" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20605839" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public enum CalendarItemCreateOrDeleteOperationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CalendarItemCreateOrDeleteOperationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.CalendarItemCreateOrDeleteOperationType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CalendarItemCreateOrDeleteOperationType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class CalendarItemCreateOrDeleteOperationType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="d2648-101">Die <see cref="T:ExchangeWebServices.CalendarItemCreateOrDeleteOperationType" /> Enumeration wird beschrieben, wie Besprechungsanfragen und absagen behandelt werden.</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="d2648-101">The <see cref="T:ExchangeWebServices.CalendarItemCreateOrDeleteOperationType" /> enumeration describes how meeting requests and cancellations are handled.</span>
+      </span>
+    </summary>
+    <remarks>
+      <span data-ttu-id="d2648-102">
+        <para>Sie können die Methode zur Handhabung von Besprechungsanfragen Mobilgeräts bestimmen die <see cref="P:ExchangeWebServices.CreateItemType.SendMeetingInvitations" /> Eigenschaft. Sie müssen festlegen, die <see cref="P:ExchangeWebServices.CreateItemType.SendMeetingInvitationsSpecified" /> -Eigenschaft auf <b>true</b> , damit die <see cref="P:ExchangeWebServices.CreateItemType.SendMeetingInvitations" /> Eigenschaft wird in die SOAP-Anforderung serialisiert.</para>
+        <para>Können Sie die Methode zur Handhabung von Besprechungsabsagen Mobilgeräts bestimmen die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> Eigenschaft. Sie müssen festlegen, die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellationsSpecified" /> -Eigenschaft auf <b>true</b> , damit die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> Eigenschaft wird in die SOAP-Anforderung serialisiert.</para>
+        <para />
+      </span>
+      <span class="sxs-lookup">
+        <span data-stu-id="d2648-102">
+          <para>You can determine the method for handling meeting requests by checking the <see cref="P:ExchangeWebServices.CreateItemType.SendMeetingInvitations" /> property. You must set the <see cref="P:ExchangeWebServices.CreateItemType.SendMeetingInvitationsSpecified" /> property to <b>true</b> so that the <see cref="P:ExchangeWebServices.CreateItemType.SendMeetingInvitations" /> property is serialized into the SOAP request.</para>
+          <para>You can determine the method for handling meeting cancellations by checking the <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> property. You must set the <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellationsSpecified" /> property to <b>true</b> so that the <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> property is serialized into the SOAP request.</para>
+          <para />
+        </span>
+      </span>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SendOnlyToAll">
+      <MemberSignature Language="C#" Value="SendOnlyToAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.CalendarItemCreateOrDeleteOperationType SendOnlyToAll = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.CalendarItemCreateOrDeleteOperationType.SendOnlyToAll" />
+      <MemberSignature Language="VB.NET" Value="SendOnlyToAll" />
+      <MemberSignature Language="C++ CLI" Value="SendOnlyToAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.CalendarItemCreateOrDeleteOperationType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="d2648-103">Gibt an, dass die Besprechung wird erstellt und eine Besprechungsanfrage wird an alle Teilnehmer gesendet, aber keine Kopie der Besprechungsanfrage wird gespeichert, in der CreateItem-Vorgang.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d2648-103">In the CreateItem operation, specifies that the meeting is created and a meeting request is sent to all attendees, but no copy of the meeting request is saved.</span>
+          </span>
+          <span data-ttu-id="d2648-104">Bei der Konflikte DeleteItem gibt an, dass die Besprechung gelöscht wird und eine Besprechung Absage an alle Teilnehmer gesendet wird, jedoch keine Kopie der Besprechungsabsage gespeichert ist.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d2648-104">In the DeleteItem operation, specifies that the meeting is deleted and a meeting cancellation message is sent to all attendees, but no copy of the meeting cancellation is saved.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendToAllAndSaveCopy">
+      <MemberSignature Language="C#" Value="SendToAllAndSaveCopy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.CalendarItemCreateOrDeleteOperationType SendToAllAndSaveCopy = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.CalendarItemCreateOrDeleteOperationType.SendToAllAndSaveCopy" />
+      <MemberSignature Language="VB.NET" Value="SendToAllAndSaveCopy" />
+      <MemberSignature Language="C++ CLI" Value="SendToAllAndSaveCopy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.CalendarItemCreateOrDeleteOperationType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="d2648-105">In der CreateItem-Vorgang gibt an, dass die Besprechung wird erstellt, eine Besprechungsanfrage an alle Teilnehmer gesendet wird, wird eine Kopie der Besprechungsanfrage im Ordner "Gesendete Elemente" gespeichert.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d2648-105">In the CreateItem operation, specifies that the meeting is created, a meeting request is sent to all attendees, and a copy of the meeting request is saved in the Sent Items folder.</span>
+          </span>
+          <span data-ttu-id="d2648-106">Bei der Konflikte DeleteItem gibt an, dass die Besprechung gelöscht wird, einer Besprechung Absage wird an alle Teilnehmer gesendet, und eine Kopie der Besprechungsabsage wird im Ordner "Gesendete Elemente" gespeichert.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d2648-106">In the DeleteItem operation, specifies that the meeting is deleted, a meeting cancellation message is sent to all attendees, and a copy of the meeting cancellation is saved in the Sent Items folder.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendToNone">
+      <MemberSignature Language="C#" Value="SendToNone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.CalendarItemCreateOrDeleteOperationType SendToNone = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.CalendarItemCreateOrDeleteOperationType.SendToNone" />
+      <MemberSignature Language="VB.NET" Value="SendToNone" />
+      <MemberSignature Language="C++ CLI" Value="SendToNone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.CalendarItemCreateOrDeleteOperationType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="d2648-107">Gibt an, dass die Besprechung erstellt wurde, jedoch keine Besprechungsanfrage wird an die Teilnehmer gesendet, in der CreateItem-Vorgang.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d2648-107">In the CreateItem operation, specifies that the meeting is created but no meeting request is sent to attendees.</span>
+          </span>
+          <span data-ttu-id="d2648-108">Bei der Konflikte DeleteItem gibt an, dass die Besprechung, aber keine Besprechung gelöscht wird Abbruch Nachricht wird an die Teilnehmer gesendet.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="d2648-108">In the DeleteItem operation, specifies that the meeting is deleted but no meeting cancellation message is sent to attendees.</span>
+          </span>
+        </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
