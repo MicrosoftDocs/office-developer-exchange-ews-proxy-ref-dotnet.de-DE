@@ -1,0 +1,160 @@
+<Type Name="UserOofSettings" FullName="ExchangeWebServices.UserOofSettings">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="12556c4d328adbe11363bed629a138a236bfe358" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20605841" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class UserOofSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit UserOofSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.UserOofSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class UserOofSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UserOofSettings" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.UserOofSettings" /> Klasse gibt an, die Out of Office (OOF) Einstellungen für einen Benutzer.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserOofSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.UserOofSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; UserOofSettings();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.UserOofSettings" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.UserOofSettings" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.Duration Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.Duration Duration" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.UserOofSettings.Duration" />
+      <MemberSignature Language="VB.NET" Value="Public Property Duration As Duration" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::Duration ^ Duration { ExchangeWebServices::Duration ^ get(); void set(ExchangeWebServices::Duration ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.Duration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.UserOofSettings.Duration" /> -Eigenschaft dient zum Abrufen oder Festlegen eines Werts, der die Dauer angibt, für die die Abwesenheitsnotiz Abwesenheitsstatus (OOF) aktiviert werden, wenn, die <see cref="P:ExchangeWebServices.UserOofSettings.OofState" /> -Eigenschaft enthält <see cref="F:ExchangeWebServices.OofState.Scheduled" />. Wenn die <see cref="P:ExchangeWebServices.UserOofSettings.OofState" /> -Eigenschaft enthält <see cref="F:ExchangeWebServices.OofState.Enabled" /> oder <see cref="F:ExchangeWebServices.OofState.Disabled" />, wird der Wert dieser Eigenschaft ignoriert.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.UserOofSettings.Duration" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.Duration" /> -Objekt, enthält der Start- und Endzeit für die die Einstellungen OOF aktiviert werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalAudience">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.ExternalAudience ExternalAudience { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ExchangeWebServices.ExternalAudience ExternalAudience" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.UserOofSettings.ExternalAudience" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExternalAudience As ExternalAudience" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::ExternalAudience ExternalAudience { ExchangeWebServices::ExternalAudience get(); void set(ExchangeWebServices::ExternalAudience value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.ExternalAudience</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.UserOofSettings.ExternalAudience" /> -Eigenschaft dient zum Abrufen oder Festlegen eines Werts, der angibt, denen externe abwesend (ABWESEND) Testnachrichten gesendet werden.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.UserOofSettings.ExternalAudience" /> -Eigenschaft gibt ein <see cref="T:ExchangeWebServices.ExternalAudience" /> -Enumerationswert ab, der angibt, denen externe OOF Testnachrichten gesendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalReply">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.ReplyBody ExternalReply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.ReplyBody ExternalReply" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.UserOofSettings.ExternalReply" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExternalReply As ReplyBody" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::ReplyBody ^ ExternalReply { ExchangeWebServices::ReplyBody ^ get(); void set(ExchangeWebServices::ReplyBody ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.ReplyBody</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.UserOofSettings.ExternalReply" /> -Eigenschaft dient zum Abrufen oder Festlegen der Abwesenheitsnachricht (OOF), die an Adressen außerhalb der Domäne des Empfängers oder vertrauenswürdigen Domänen gesendet wird.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.UserOofSettings.ExternalReply" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.ReplyBody" /> -Objekt, das die Abwesenheitsnachricht zum Senden an externen Adressen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalReply">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.ReplyBody InternalReply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.ReplyBody InternalReply" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.UserOofSettings.InternalReply" />
+      <MemberSignature Language="VB.NET" Value="Public Property InternalReply As ReplyBody" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::ReplyBody ^ InternalReply { ExchangeWebServices::ReplyBody ^ get(); void set(ExchangeWebServices::ReplyBody ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.ReplyBody</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.UserOofSettings.InternalReply" /> Eigenschaft ruft ab oder legt die Abwesenheitsnachricht (OOF), die an andere Adressen in der Domäne oder der vertrauenswürdigen Domänen des Empfängers gesendet wird.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.UserOofSettings.InternalReply" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.ReplyBody" /> -Objekt, das die Abwesenheitsnachricht zum Senden an interne Adressen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OofState">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.OofState OofState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ExchangeWebServices.OofState OofState" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.UserOofSettings.OofState" />
+      <MemberSignature Language="VB.NET" Value="Public Property OofState As OofState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::OofState OofState { ExchangeWebServices::OofState get(); void set(ExchangeWebServices::OofState value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.OofState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.UserOofSettings.OofState" /> -Eigenschaft ruft ab oder legt des Postfachbenutzers aus Office (OOF) Zustand.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.UserOofSettings.OofState" /> Eigenschaft gibt eine von der <see cref="T:ExchangeWebServices.OofState" /> Enumerationswerte, mit denen das des Postfachbenutzers OOF Zustand an.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
