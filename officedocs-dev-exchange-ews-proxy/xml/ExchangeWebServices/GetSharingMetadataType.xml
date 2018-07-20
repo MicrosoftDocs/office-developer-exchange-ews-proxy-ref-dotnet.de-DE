@@ -1,0 +1,151 @@
+<Type Name="GetSharingMetadataType" FullName="ExchangeWebServices.GetSharingMetadataType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="11c842874035aae76e82554d8530d6266fe33fab" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606223" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class GetSharingMetadataType : ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit GetSharingMetadataType extends ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.GetSharingMetadataType" />
+  <TypeSignature Language="VB.NET" Value="Public Class GetSharingMetadataType&#xA;Inherits BaseRequestType" />
+  <TypeSignature Language="C++ CLI" Value="public ref class GetSharingMetadataType : ExchangeWebServices::BaseRequestType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>ExchangeWebServices.BaseRequestType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/messages")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.GetSharingMetadataType" /> -Klasse repräsentiert eine Anforderung an ein undurchsichtiger Authentifizierungstoken erhalten möchten, die die Einladung zur Freigabe identifiziert.</summary>
+    <remarks>To be added.</remarks>
+    <example>
+      <para>Das folgende Codebeispiel veranschaulicht das ein undurchsichtig Authentifizierungstoken erhalten möchten, die eine freigabeeinladung identifiziert. In diesem Beispiel möchte user1@contoso.com user1@fabikam.com und user2@test.com des Kontaktordners freigeben. <b>IdOfContactsFolder</b> stellt die <see cref="T:ExchangeWebServices.FolderIdType" /> Objekt, das den Kontakteordner von user1@contoso.com entspricht.</para>
+      <code>static void GetSharingMetadataTest(ExchangeServiceBinding esb)
+{
+    // Create the sharing request.
+    GetSharingMetadataType gsmRequest = new GetSharingMetadataType();
+    
+    // Specify the identifier of the folder to be shared.
+    gsmRequest.IdOfFolderToShare = &lt;span class="label"&gt;IdOfContactsFolder&lt;/span&gt;;
+
+    // Specify the sender of the request and the intended recipients.
+    gsmRequest.SenderSmtpAddress = "user1@contoso.com";
+    gsmRequest.Recipients = new string[] { "user1@fabrikam.com", "user2@test.com" };
+    
+    try
+    {
+      // Submit the request and get the response.
+      GetSharingMetadataResponseMessageType gsmResponse = esb.GetSharingMetadata(gsmRequest);
+    }
+    catch (Exception e)
+    {
+      Console.WriteLine(e.Message);
+    }
+}
+</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetSharingMetadataType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.GetSharingMetadataType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; GetSharingMetadataType();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.GetSharingMetadataType" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.GetSharingMetadataType" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdOfFolderToShare">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.FolderIdType IdOfFolderToShare { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.FolderIdType IdOfFolderToShare" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.GetSharingMetadataType.IdOfFolderToShare" />
+      <MemberSignature Language="VB.NET" Value="Public Property IdOfFolderToShare As FolderIdType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::FolderIdType ^ IdOfFolderToShare { ExchangeWebServices::FolderIdType ^ get(); void set(ExchangeWebServices::FolderIdType ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.FolderIdType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.GetSharingMetadataType.IdOfFolderToShare" /> -Eigenschaft dient zum Abrufen oder Festlegen eines <see cref="T:ExchangeWebServices.FolderIdType" /> -Objekt, das den freizugebenden Ordner identifiziert.</summary>
+        <value>Der Wert der <see cref="P:ExchangeWebServices.GetSharingMetadataType.IdOfFolderToShare" /> -Eigenschaft ist ein <see cref="T:ExchangeWebServices.FolderIdType" /> , identifiziert den Ordner freigeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recipients">
+      <MemberSignature Language="C#" Value="public string[] Recipients { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Recipients" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.GetSharingMetadataType.Recipients" />
+      <MemberSignature Language="VB.NET" Value="Public Property Recipients As String()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ Recipients { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("SmtpAddress", IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.GetSharingMetadataType.Recipients" /> -Eigenschaft dient zum Abrufen oder Festlegen einer Zeichenfolge mit der SMTP-E-mail-Adressen der eine oder mehrere Entitäten, die Daten in den Ordner freigeben aufgefordert werden, die vom angegeben wird die <see cref="P:ExchangeWebServices.GetSharingMetadataType.IdOfFolderToShare" /> Eigenschaft.</summary>
+        <value>Der Wert der <see cref="P:ExchangeWebServices.GetSharingMetadataType.Recipients" /> -Eigenschaft ist eine Zeichenfolge, die SMTP-e-Mail-Adressen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderSmtpAddress">
+      <MemberSignature Language="C#" Value="public string SenderSmtpAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SenderSmtpAddress" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.GetSharingMetadataType.SenderSmtpAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property SenderSmtpAddress As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SenderSmtpAddress { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.GetSharingMetadataType.SenderSmtpAddress" /> -Eigenschaft ruft ab oder legt die SMTP-e-Mail-Adresse, entspricht auf das Postfach, das den Ordner enthält, die von der mustererkennung der <see cref="P:ExchangeWebServices.GetSharingMetadataType.IdOfFolderToShare" /> Eigenschaft.</summary>
+        <value>Der Wert der <see cref="P:ExchangeWebServices.GetSharingMetadataType.SenderSmtpAddress" /> -Eigenschaft ist eine Zeichenfolge, die eine SMTP-e-Mail-Adresse enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

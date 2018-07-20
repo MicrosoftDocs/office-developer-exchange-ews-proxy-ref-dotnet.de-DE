@@ -1,0 +1,200 @@
+<Type Name="CreateAttachmentType" FullName="ExchangeWebServices.CreateAttachmentType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="7cd0589cfb5fd51212bca2f3e9fcfe0e6b3a2250" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20607393" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class CreateAttachmentType : ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CreateAttachmentType extends ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.CreateAttachmentType" />
+  <TypeSignature Language="VB.NET" Value="Public Class CreateAttachmentType&#xA;Inherits BaseRequestType" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CreateAttachmentType : ExchangeWebServices::BaseRequestType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>ExchangeWebServices.BaseRequestType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/messages")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.CreateAttachmentType" /> -Klasse repräsentiert eine Anforderung zum Anfügen eines Elements oder einer Datei an ein angegebenes Element in der Exchange-Datenbank.</summary>
+    <remarks>
+      <para>Sie können nicht mit einem anderen Element ein vorhandenes Elements anfügen. So fügen Sie den Inhalt eines vorhandenen Elements, übergeben Sie die <see cref="P:ExchangeWebServices.ItemType.MimeContent" /> des vorhandenen Elements auf die Anlage, die Sie erstellen möchten. Stellen Sie sicher, dass alle Eigenschaften auf null festgelegt, die für ein vorhandenes Element zurückgegeben werden. Nur die Inhalte Multipurpose Internet Mail Extensions (MIME) sollte in der Anlage verwendet werden. Wenn Sie versuchen, ein vorhandenes Element mit einem anderen Element anfügen, enthält die Antwort einen Fehler, da die Exchange-Datenbank doppelte Elementbezeichner enthalten kann nicht.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>Das folgende Codebeispiel zeigt eine erstellen-Anlage-Anforderung, die Anlage zu einer Datei und Element auf ein vorhandenes Element in der Exchange-Datenbank erstellt wird.</para>
+      <code>static void CreateAttachment(ExchangeServiceBinding esb)
+{
+    // Create the item attachment.
+    MessageType message = new MessageType();
+    message.Subject = "Example subject";
+    message.Importance = ImportanceChoicesType.Low;
+    message.ImportanceSpecified = true;
+
+    ItemAttachmentType itemAttach = new ItemAttachmentType();
+    itemAttach.Name = "Message Attachment Example";
+    itemAttach.Item = message;
+
+    // Create the file attachment.
+    FileAttachmentType fileAttach = new FileAttachmentType();
+    fileAttach.Name = "filename.txt";
+    fileAttach.ContentType = "text/plain";
+
+    byte[] content;
+    using (FileStream fileStream = new FileStream("C:\\cas.txt",
+        FileMode.Open, FileAccess.Read))
+    {
+        content = new byte[fileStream.Length];
+        fileStream.Read(content, 0, content.Length);
+    }
+
+    fileAttach.Content = content;
+
+    // Create the CreateAttachment request.
+    CreateAttachmentType &lt;span class="label"&gt;reqCreateAttach&lt;/span&gt;= new CreateAttachmentType();
+
+    // Identify the item that will have the attachments.
+    ItemIdType item = new ItemIdType();
+    item.Id = "AAAlAE1BQG1h";
+    item.ChangeKey = "DwAAABYAAA"; 
+    
+    // Add the parent item to the request.
+    &lt;span class="label"&gt;reqCreateAttach&lt;/span&gt;.ParentItemId = item;
+
+    // Add attachments to the request.
+    &lt;span class="label"&gt;reqCreateAttach&lt;/span&gt;.Attachments = new AttachmentType[2];
+    &lt;span class="label"&gt;reqCreateAttach&lt;/span&gt;.Attachments[0] = itemAttach;
+    &lt;span class="label"&gt;reqCreateAttach&lt;/span&gt;.Attachments[1] = fileAttach;
+
+    try
+    {
+        CreateAttachmentResponseType resp = esb.CreateAttachment(&lt;span class="label"&gt;reqCreateAttach&lt;/span&gt;);
+        ArrayOfResponseMessagesType aorit = resp.ResponseMessages;
+        ResponseMessageType[] rmta = aorit.Items;
+
+        foreach (ResponseMessageType rmt in rmta)
+        {
+            if (rmt.ResponseClass == ResponseClassType.Success)
+            {
+                AttachmentInfoResponseMessageType airmt = rmt as AttachmentInfoResponseMessageType;
+                foreach (AttachmentType atch in airmt.Attachments)
+                {
+                    if (atch is ItemAttachmentType)
+                    {
+                        Console.WriteLine("Created item attachment");
+                    }
+                    else if (atch is FileAttachmentType)
+                    {
+                        Console.WriteLine("Created file attachment");
+                    }
+                    else
+                    {
+                        throw new Exception("Unknown attachment");
+                    }
+                }
+            }
+        }
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CreateAttachmentType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.CreateAttachmentType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CreateAttachmentType();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.CreateAttachmentType" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.CreateAttachmentType" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attachments">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.AttachmentType[] Attachments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.AttachmentType[] Attachments" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.CreateAttachmentType.Attachments" />
+      <MemberSignature Language="VB.NET" Value="Public Property Attachments As AttachmentType()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;ExchangeWebServices::AttachmentType ^&gt; ^ Attachments { cli::array &lt;ExchangeWebServices::AttachmentType ^&gt; ^ get(); void set(cli::array &lt;ExchangeWebServices::AttachmentType ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("FileAttachment", typeof(ExchangeWebServices.FileAttachmentType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("ItemAttachment", typeof(ExchangeWebServices.ItemAttachmentType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.AttachmentType[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.CreateAttachmentType.Attachments" /> -Eigenschaft dient zum Abrufen oder festlegen die Anlagen für den Vorgang CreateAttachment erstellen.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.CreateAttachmentType.Attachments" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.AttachmentType" /> Array, das den Satz von Anlagen enthält.</value>
+        <remarks>
+          <para>Die <see cref="P:ExchangeWebServices.CreateAttachmentType.Attachments" /> -Eigenschaft kann eine Reihe von Datei und Element Anlagen enthalten.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentItemId">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.ItemIdType ParentItemId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.ItemIdType ParentItemId" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.CreateAttachmentType.ParentItemId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParentItemId As ItemIdType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::ItemIdType ^ ParentItemId { ExchangeWebServices::ItemIdType ^ get(); void set(ExchangeWebServices::ItemIdType ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.ItemIdType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.CreateAttachmentType.ParentItemId" /> Eigenschaft ruft ab oder legt das übergeordnete Element in der Exchange-Datenbank, die die Anlagen empfängt.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.CreateAttachmentType.ParentItemId" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.ItemIdType" /> , der den Bezeichner des übergeordneten Elements darstellt.</value>
+        <remarks>
+          <para>Das übergeordnete Element <see cref="P:ExchangeWebServices.ItemIdType.ChangeKey" /> Eigenschaft geändert wird, wenn die Anlagen zugeordnet sind.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>ParentItemId</para>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

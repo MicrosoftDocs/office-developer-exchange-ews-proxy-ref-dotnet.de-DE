@@ -1,0 +1,172 @@
+<Type Name="SendItemType" FullName="ExchangeWebServices.SendItemType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="c5483f3bf096a828c6491577d69d17f79642068f" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606901" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class SendItemType : ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SendItemType extends ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.SendItemType" />
+  <TypeSignature Language="VB.NET" Value="Public Class SendItemType&#xA;Inherits BaseRequestType" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SendItemType : ExchangeWebServices::BaseRequestType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>ExchangeWebServices.BaseRequestType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/messages")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.SendItemType" /> -Klasse repräsentiert eine Anforderung an eine Nachricht senden.</summary>
+    <remarks>
+      <para>Der Vorgang CreateItem sendet E-mails und Besprechungsanfragen an Empfänger und Teilnehmer. Den SendItem-Vorgang wird verwendet, wenn das Element erstellt wurde und nicht gesendet wurde.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>Das folgende Codebeispiel veranschaulicht das Erstellen einer Anforderung den SendItem mithilfe der <see cref="T:ExchangeWebServices.SendItemType" /> Klasse.</para>
+      <code>ExchangeServiceBinding esb = new ExchangeServiceBinding();
+esb.Credentials = new NetworkCredential("username", "password", "myDomain");
+esb.Url = @"https://myServer.myDomain.com/EWS/Exchange.asmx";
+// Create the SendItem request.
+SendItemType &lt;span class="label"&gt;sit&lt;/span&gt; = new SendItemType();
+&lt;span class="label"&gt;sit&lt;/span&gt;.ItemIds = new BaseItemIdType[1];
+
+// Create an item ID type and set the message ID and change key.
+ItemIdType itemId = new ItemIdType();
+
+// Get the ID and change key from the message that was obtained by using FindItem or CreateItem.
+itemId.Id = "AQAtA=";
+itemId.ChangeKey = "CQAAAB";
+
+&lt;span class="label"&gt;sit&lt;/span&gt;.ItemIds[0] = itemId;
+
+// Send the message.
+SendItemResponseType siResponse = esb.SendItem(&lt;span class="label"&gt;sit&lt;/span&gt;);</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendItemType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.SendItemType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SendItemType();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.SendItemType" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.SendItemType" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIds">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.BaseItemIdType[] ItemIds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.BaseItemIdType[] ItemIds" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.SendItemType.ItemIds" />
+      <MemberSignature Language="VB.NET" Value="Public Property ItemIds As BaseItemIdType()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;ExchangeWebServices::BaseItemIdType ^&gt; ^ ItemIds { cli::array &lt;ExchangeWebServices::BaseItemIdType ^&gt; ^ get(); void set(cli::array &lt;ExchangeWebServices::BaseItemIdType ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("OccurrenceItemId", typeof(ExchangeWebServices.OccurrenceItemIdType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("RecurringMasterItemId", typeof(ExchangeWebServices.RecurringMasterItemIdType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("ItemId", typeof(ExchangeWebServices.ItemIdType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("RecurringMasterItemIdRanges", typeof(ExchangeWebServices.RecurringMasterItemIdRangesType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.BaseItemIdType[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.SendItemType.ItemIds" /> -Eigenschaft dient zum Abrufen oder ein Array der Element-IDs, die verwendet werden, zum Bestimmen der Elemente zu versuchen, zu senden. Legen Sie diese Eigenschaft mit einem <see cref="T:ExchangeWebServices.ItemIdType" /> Array. Diese Eigenschaft ist erforderlich. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.SendItemType.ItemIds" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.BaseItemIdType" /> Array.</value>
+        <remarks>
+          <para>Die <see cref="P:ExchangeWebServices.SendItemType.ItemIds" /> Eigenschaft umgewandelt werden sollten, um eine <see cref="T:ExchangeWebServices.ItemIdType" /> Array.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SavedItemFolderId">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.TargetFolderIdType SavedItemFolderId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.TargetFolderIdType SavedItemFolderId" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.SendItemType.SavedItemFolderId" />
+      <MemberSignature Language="VB.NET" Value="Public Property SavedItemFolderId As TargetFolderIdType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::TargetFolderIdType ^ SavedItemFolderId { ExchangeWebServices::TargetFolderIdType ^ get(); void set(ExchangeWebServices::TargetFolderIdType ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.TargetFolderIdType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.SendItemType.SavedItemFolderId" /> Eigenschaft ruft ab oder legt die Identität des Ordners, die eine gespeicherte Version das gesendete Element enthält. Diese Eigenschaft wird festgelegt, entweder mit einem <see cref="T:ExchangeWebServices.FolderIdType" /> oder eine <see cref="T:ExchangeWebServices.DistinguishedFolderIdType" />. Diese Eigenschaft ist optional. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.SendItemType.SavedItemFolderId" />-Eigenschaft gibt ein <see cref="T:ExchangeWebServices.TargetFolderIdType" />-Objekt zurück.</value>
+        <remarks>
+          <para>Wenn diese Eigenschaft nicht festgelegt ist und die <see cref="P:ExchangeWebServices.SendItemType.SaveItemToFolder" /> -Eigenschaft auf <b>true</b>festgelegt ist, wird das Element im Ordner "Gesendete Elemente" gespeichert.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveItemToFolder">
+      <MemberSignature Language="C#" Value="public bool SaveItemToFolder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SaveItemToFolder" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.SendItemType.SaveItemToFolder" />
+      <MemberSignature Language="VB.NET" Value="Public Property SaveItemToFolder As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SaveItemToFolder { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.SendItemType.SaveItemToFolder" /> -Eigenschaft dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob eine Kopie der das gesendete Element gespeichert wird. Diese Eigenschaft ist erforderlich. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.SendItemType.SaveItemToFolder" /> Eigenschaft gibt <b>true,</b> Wenn das gesendete Element in einen Ordner; gespeichert wird Andernfalls wird <b>false</b>zurückgegeben.</value>
+        <remarks>
+          <para>Wenn diese Eigenschaft auf <b>true fest,</b>den Ordner festgelegt wird, die von der mustererkennung der <see cref="P:ExchangeWebServices.SendItemType.SavedItemFolderId" /> -Eigenschaft erhält eine Kopie der das gesendete Element. Wenn diese Eigenschaft auf <b>true</b> festgelegt ist und die <see cref="P:ExchangeWebServices.SendItemType.SavedItemFolderId" /> Eigenschaft nicht festgelegt ist, wird eine Kopie des gesendeten Elements im Standardordner gesendete Objekte gespeichert.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,410 @@
+<Type Name="FreeBusyViewType" FullName="ExchangeWebServices.FreeBusyViewType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="3f1121c88206f6bff0713b5840ea037f70ebc076" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20607005" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public enum FreeBusyViewType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed FreeBusyViewType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.FreeBusyViewType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum FreeBusyViewType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class FreeBusyViewType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.FreeBusyViewType" /> Enumeration gibt den Typ der Kalenderinformationen, die ein Client anfordert.</summary>
+    <remarks>
+      <para>Diese Enumeration wird von der <see cref="P:ExchangeWebServices.FreeBusyViewOptionsType.RequestedView" /> -Eigenschaft des der <see cref="T:ExchangeWebServices.FreeBusyViewOptionsType" /> -Objekts in der Anforderung an den Typ des Frei/Gebucht-Informationen, die in der Antwort zurückgegeben. Diese Enumeration wird auch von der <see cref="P:ExchangeWebServices.FreeBusyView.FreeBusyViewType" /> -Eigenschaft des der <see cref="T:ExchangeWebServices.FreeBusyView" /> -Objekt, das den Typ des Frei/Gebucht-Informationen anzugeben, in der Antwort zurückgegeben wird.</para>
+      <para>In der folgenden Tabelle werden die Eigenschaften für die anderen Ansichtstypen und der entsprechenden MAPI-Eigenschaft. Jede Ansichtstyp baut auf der früheren Ansichtstyp.</para>
+      <para>FreeBusyViewType-Eigenschaften</para>
+      <list type="table">
+        <item>
+          <term>
+            <b>MergedOnly</b>
+          </term>
+          <description>MergedFreeBusyStream</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>FreeBusy</b>
+          </term>
+          <description>klassische Status</description>
+          <description>PropTag (0x80860003)</description>
+        </item>
+        <item>
+          <term>
+            <b>FreeBusy</b>
+          </term>
+          <description>Arbeitszeit</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>FreeBusy</b>
+          </term>
+          <description>PR_START_DATE</description>
+          <description>Startzeit</description>
+        </item>
+        <item>
+          <term>
+            <b>FreeBusy</b>
+          </term>
+          <description>Endzeit</description>
+          <description>PR_END_DATE</description>
+        </item>
+        <item>
+          <term>
+            <b>FreeBusyMerged</b>
+          </term>
+          <description>klassische Status</description>
+          <description>PropTag (0x80860003)</description>
+        </item>
+        <item>
+          <term>
+            <b>FreeBusyMerged</b>
+          </term>
+          <description>Arbeitszeit</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>FreeBusyMerged</b>
+          </term>
+          <description>PR_START_DATE</description>
+          <description>Startzeit</description>
+        </item>
+        <item>
+          <term>
+            <b>FreeBusyMerged</b>
+          </term>
+          <description>Endzeit</description>
+          <description>PR_END_DATE</description>
+        </item>
+        <item>
+          <term>
+            <b>FreeBusyMerged</b>
+          </term>
+          <description>MergedFreeBusyStream</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>Detailed</b>
+          </term>
+          <description>klassische Status</description>
+          <description>PropTag (0x80860003)</description>
+        </item>
+        <item>
+          <term>
+            <b>Detailed</b>
+          </term>
+          <description>Arbeitszeit</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>Detailed</b>
+          </term>
+          <description>PR_START_DATE</description>
+          <description>Startzeit</description>
+        </item>
+        <item>
+          <term>
+            <b>Detailed</b>
+          </term>
+          <description>Endzeit</description>
+          <description>PR_END_DATE</description>
+        </item>
+        <item>
+          <term>
+            <b>Detaillierte</b>
+          </term>
+          <description>Betreff</description>
+          <description>PR_SUBJECT</description>
+        </item>
+        <item>
+          <term>
+            <b>Detaillierte</b>
+          </term>
+          <description>Speicherort</description>
+          <description>PR_LOCATION</description>
+        </item>
+        <item>
+          <term>
+            <b>Detailed</b>
+          </term>
+          <description>Eintrag Id(unless private)</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>Detaillierte</b>
+          </term>
+          <description>Private Flag</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>Detaillierte</b>
+          </term>
+          <description>IsMeeting</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>Detaillierte</b>
+          </term>
+          <description>IsRecurring</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>Detaillierte</b>
+          </term>
+          <description>IsException</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>Detaillierte</b>
+          </term>
+          <description>IsReminderSet</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>Detailed</b>
+          </term>
+          <description>Out of Office Nachricht (falls erforderlich)</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>klassische Status</description>
+          <description>PropTag (0x80860003)</description>
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>Arbeitszeit</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>PR_START_DATE</description>
+          <description>Startzeit</description>
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>Endzeit</description>
+          <description>PR_END_DATE</description>
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>Betreff</description>
+          <description>PR_SUBJECT</description>
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>Speicherort</description>
+          <description>PR_LOCATION</description>
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>Eintrag Id(unless private)</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>Private Flag</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>MergedFreeBusyStream</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>IsMeeting</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>IsRecurring</description>
+          <description />
+        </item>
+        <item>
+          <term>
+            <b>DetailedMerged</b>
+          </term>
+          <description>IsException</description>
+          <description />
+        </item>
+        <term>
+          <b>DetailedMerged</b>
+        </term>
+        <description>IsReminderSet</description>
+        <description />
+      </list>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Detailed">
+      <MemberSignature Language="C#" Value="Detailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.FreeBusyViewType Detailed = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.FreeBusyViewType.Detailed" />
+      <MemberSignature Language="VB.NET" Value="Detailed" />
+      <MemberSignature Language="C++ CLI" Value="Detailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.FreeBusyViewType</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>Stellt Folgendes dar:</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailedMerged">
+      <MemberSignature Language="C#" Value="DetailedMerged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.FreeBusyViewType DetailedMerged = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.FreeBusyViewType.DetailedMerged" />
+      <MemberSignature Language="VB.NET" Value="DetailedMerged" />
+      <MemberSignature Language="C++ CLI" Value="DetailedMerged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.FreeBusyViewType</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>Stellt alle Eigenschaften in <b>Detailed</b> mit einen Datenstrom zusammengeführten Frei/Gebucht-Informationen zu Ihrer Verfügbarkeit einsehen. Wenn zusammengeführten Frei/Gebucht-Informationen nur verfügbar ist, beispielsweise wenn das Postfach auf einem Computer vorhanden ist, auf dem Exchange 2003 ausgeführt wird, wird <b>MergedOnly</b> zurückgegeben. Andernfalls wird <b>FreeBusyMerged</b> oder <b>DetailedMerged</b> zurückgegeben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FreeBusy">
+      <MemberSignature Language="C#" Value="FreeBusy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.FreeBusyViewType FreeBusy = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.FreeBusyViewType.FreeBusy" />
+      <MemberSignature Language="VB.NET" Value="FreeBusy" />
+      <MemberSignature Language="C++ CLI" Value="FreeBusy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.FreeBusyViewType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Stellt die Vorversion Statusinformationen (frei, gebucht, mit Vorbehalt und OOF). Dazu gehören auch die Start- und Endzeiten der Termine. Diese Ansicht ist umfangreicher als die Vorversion Frei/Gebucht-Informationen anzeigen, da einzelne Besprechung starten und beenden Sie Zeiten anstelle einer aggregierten Frei/Gebucht-Stream bereitgestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FreeBusyMerged">
+      <MemberSignature Language="C#" Value="FreeBusyMerged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.FreeBusyViewType FreeBusyMerged = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.FreeBusyViewType.FreeBusyMerged" />
+      <MemberSignature Language="VB.NET" Value="FreeBusyMerged" />
+      <MemberSignature Language="C++ CLI" Value="FreeBusyMerged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.FreeBusyViewType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Stellt alle Eigenschaften in <b>FreeBusy</b> mit einen Datenstrom zusammengeführten Frei/Gebucht-Informationen zu Ihrer Verfügbarkeit einsehen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MergedOnly">
+      <MemberSignature Language="C#" Value="MergedOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.FreeBusyViewType MergedOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.FreeBusyViewType.MergedOnly" />
+      <MemberSignature Language="VB.NET" Value="MergedOnly" />
+      <MemberSignature Language="C++ CLI" Value="MergedOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.FreeBusyViewType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Stellt einen aggregierten Frei/Gebucht-Stream. In gesamtstrukturübergreifenden-Szenarien, in denen die Zielbenutzer in einer Gesamtstruktur keine Verfügbarkeitsdienst konfiguriert haben, ruft der Verfügbarkeitsdienst des Antragstellers des Zielbenutzers Frei/Gebucht-Informationen aus dem öffentlichen Ordner mit Frei/Gebucht-Informationen. Da Öffentliche Ordner nur Frei/Gebucht-Informationen in zusammengeführte Formular gespeichert werden sollen, ist <b>MergedOnly</b> die einzige verfügbare Informationen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.FreeBusyViewType None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.FreeBusyViewType.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.FreeBusyViewType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Dieser Wert ist nicht gültig für Anfragen. Dieser Wert gilt für Antworten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

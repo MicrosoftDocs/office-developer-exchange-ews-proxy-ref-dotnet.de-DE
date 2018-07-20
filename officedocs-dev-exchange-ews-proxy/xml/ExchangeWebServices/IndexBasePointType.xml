@@ -1,0 +1,78 @@
+<Type Name="IndexBasePointType" FullName="ExchangeWebServices.IndexBasePointType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="6e3e2b0b6dbe4b02e4439658cc3137033de424c9" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606222" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public enum IndexBasePointType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed IndexBasePointType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.IndexBasePointType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum IndexBasePointType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class IndexBasePointType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Der <see cref="T:ExchangeWebServices.IndexBasePointType" /> -Enumeration gibt an, ob die Seite mit Elementen beginnt am Anfang oder das Ende des Satzes von Elementen, die mithilfe der Suchkriterien gefunden werden.</summary>
+    <remarks>
+      <para>Diese Enumeration wird von der <see cref="P:ExchangeWebServices.IndexedPageViewType.BasePoint" /> -Eigenschaft des der <see cref="T:ExchangeWebServices.IndexedPageViewType" /> Objekt. </para>
+      <para>Bei Verwendung der <see cref="F:ExchangeWebServices.IndexBasePointType.End" /> Wert, beachten Sie, dass Suchvorgänge vom Ende umfasst das Verschieben in den Ursprung, die von der Offset angegeben ist. Darüber hinaus wird der Mauszeiger durch die Anzahl der angeforderten Datensätze zurück verschoben. Beispielsweise wenn 100 Datensätze vorhanden sind und der Offset 25 vom Ende ist, beginnt für die Suche von 75. Wenn 10 Datensätze zurückgegeben werden, wird der Mauszeiger rückwärts verschoben, zusätzlich 10 66 Datensätze und Datensätze 66 bis 75 zurückgibt. Der nächste Index ist 65. Der nächste Offset vom Ende einer Seite wird 100 minus 65, die 35 entspricht. 35 ist der Wert für den nächsten Offset vom Ende zum Abrufen der nächsten Seite indizierten.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Beginning">
+      <MemberSignature Language="C#" Value="Beginning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.IndexBasePointType Beginning = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.IndexBasePointType.Beginning" />
+      <MemberSignature Language="VB.NET" Value="Beginning" />
+      <MemberSignature Language="C++ CLI" Value="Beginning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.IndexBasePointType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass die Seitenansicht am Anfang der Menge der gefundenen Elemente beginnt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="End" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.IndexBasePointType End = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.IndexBasePointType.End" />
+      <MemberSignature Language="VB.NET" Value="End" />
+      <MemberSignature Language="C++ CLI" Value="End" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.IndexBasePointType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass die Seitenansicht am Ende des Satzes gefundenen Elements beginnt. Vom Ende immer bemüht sucht rückwärts.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,74 @@
+<Type Name="AggregateType" FullName="ExchangeWebServices.AggregateType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="67c982f0bfa83b2b26e08b9919f24d48072c79ce" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606809" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public enum AggregateType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AggregateType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.AggregateType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AggregateType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class AggregateType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.AggregateType" /> Enumeration bestimmt, ob der maximale oder den minimale Wert, der eine repräsentative-Eigenschaft verwendet wird, um die Elemente in einer Gruppe anzuordnen.</summary>
+    <remarks>&lt;b0&gt;Wenn Sie zum Sortieren der Elemente in einer Gruppe Aggregation verwenden, müssen Sie eine repräsentative-Eigenschaft, um die Gruppen sortieren identifizieren. Verwendung der &lt;b1&gt;&lt;/b1&gt; -Eigenschaft zum Angeben der repräsentative und die &lt;b2&gt;&lt;/b2&gt; Eigenschaft, um anzugeben, ob die Gruppen nach die maximale oder den minimalen Wert der angegebenen Eigenschaft sortiert werden. Die &lt;b3&gt;&lt;/b3&gt; Wert-Eigenschaft auf eine der folgenden festgelegt ist &lt;b4&gt;&lt;/b4&gt; Enumerationswerte:&lt;/b0&gt;&lt;b5&gt;&lt;b6&gt;&lt;b7&gt;&lt;b8&gt;&lt;b9&gt;&lt;b10&gt;&lt;b11&gt;&lt;/b11&gt;&lt;/b10&gt;&lt;/b9&gt;&lt;/b8&gt;&lt;/b7&gt;&lt;/b6&gt;&lt;/b5&gt;&lt;b12&gt;Wenn der &lt;b13&gt;&lt;/b13&gt; -Eigenschaft enthält &lt;b14&gt; &lt;/b14&gt;, werden die Gruppen sortiert beginnend mit den größten Wert für die &lt;b15&gt;&lt;/b15&gt; Eigenschaft. Wenn die &lt;b16&gt;&lt;/b16&gt; -Attribut wird festgelegt, um &lt;b17&gt; &lt;/b17&gt;, werden die Gruppen sortiert beginnend mit dem kleinsten Wert für die &lt;b18&gt;&lt;/b18&gt; -Eigenschaft.&lt;/b12&gt; &lt;b19&gt;Beispielsweise, wenn Sie eine Abfrage gruppiert FindItem ausstellen möchten, Gruppieren nach Absender, aber Sie Gruppen bestellen, damit die Gruppe verfügt über die neuesten E-mail im Vordergrund ist möchten, können Sie nach Absender und Aggregat auf Gruppieren Datum/Uhrzeit empfangen mit einer &lt;b20&gt;&lt;/b20&gt; -Eigenschaft des &lt; c2 1 &gt;.&lt;/b19&gt;&lt;b22&gt;&lt;/b22&gt;</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="Maximum" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.AggregateType Maximum = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.AggregateType.Maximum" />
+      <MemberSignature Language="VB.NET" Value="Maximum" />
+      <MemberSignature Language="C++ CLI" Value="Maximum" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.AggregateType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass die Gruppen sortiert werden, beginnend mit den größten Wert für die <see cref="P:ExchangeWebServices.GroupByType.AggregateOn" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="Minimum" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype ExchangeWebServices.AggregateType Minimum = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:ExchangeWebServices.AggregateType.Minimum" />
+      <MemberSignature Language="VB.NET" Value="Minimum" />
+      <MemberSignature Language="C++ CLI" Value="Minimum" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.AggregateType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass die Gruppen sortiert werden, beginnend mit dem kleinsten Wert für die <see cref="P:ExchangeWebServices.GroupByType.AggregateOn" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

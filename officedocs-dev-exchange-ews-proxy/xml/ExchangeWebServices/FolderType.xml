@@ -1,0 +1,137 @@
+<Type Name="FolderType" FullName="ExchangeWebServices.FolderType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="85651d354b83a0c8614610bc3716520c9ee1ba3a" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606792" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class FolderType : ExchangeWebServices.BaseFolderType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FolderType extends ExchangeWebServices.BaseFolderType" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.FolderType" />
+  <TypeSignature Language="VB.NET" Value="Public Class FolderType&#xA;Inherits BaseFolderType" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FolderType : ExchangeWebServices::BaseFolderType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>ExchangeWebServices.BaseFolderType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlInclude(typeof(ExchangeWebServices.TasksFolderType))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlInclude(typeof(ExchangeWebServices.SearchFolderType))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.FolderType" /> Klasse stellt einen regulären Ordner in der Exchange-Datenbank dar.</summary>
+    <remarks>
+      <para>Die <see cref="T:ExchangeWebServices.FolderType" /> Klasse ist die Basisklasse für die <see cref="T:ExchangeWebServices.SearchFolderType" /> und <see cref="T:ExchangeWebServices.TasksFolderType" /> Klassen.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FolderType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.FolderType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; FolderType();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.FolderType" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.FolderType" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionSet">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.PermissionSetType PermissionSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.PermissionSetType PermissionSet" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.FolderType.PermissionSet" />
+      <MemberSignature Language="VB.NET" Value="Public Property PermissionSet As PermissionSetType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::PermissionSetType ^ PermissionSet { ExchangeWebServices::PermissionSetType ^ get(); void set(ExchangeWebServices::PermissionSetType ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.PermissionSetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.FolderType.PermissionSet" /> -Eigenschaft dient zum Abrufen oder Festlegen einer <see cref="T:ExchangeWebServices.PermissionSetType" /> -Objekt, das alle Berechtigungen darstellt, die für einen bestimmten Ordner konfiguriert sind.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.FolderType.PermissionSet" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.PermissionSetType" /> -Objekt, das alle Berechtigungen darstellt, die für einen Ordner konfiguriert sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnreadCount">
+      <MemberSignature Language="C#" Value="public int UnreadCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UnreadCount" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.FolderType.UnreadCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property UnreadCount As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int UnreadCount { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.FolderType.UnreadCount" /> -Eigenschaft ruft die Anzahl der ungelesenen Elemente innerhalb eines bestimmten Ordners ab. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.FolderType.UnreadCount" /> -Eigenschaft gibt eine ganze Zahl, die die Anzahl der ungelesenen Elemente in einem Ordner darstellt.</value>
+        <remarks>
+          <para>Sie müssen festlegen, die <see cref="P:ExchangeWebServices.FolderType.UnreadCountSpecified" /> -Eigenschaft auf <b>true</b> , damit die <see cref="P:ExchangeWebServices.FolderType.UnreadCount" /> Eigenschaft wird in die SOAP-Anforderung serialisiert.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnreadCountSpecified">
+      <MemberSignature Language="C#" Value="public bool UnreadCountSpecified { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnreadCountSpecified" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.FolderType.UnreadCountSpecified" />
+      <MemberSignature Language="VB.NET" Value="Public Property UnreadCountSpecified As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UnreadCountSpecified { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.FolderType.UnreadCountSpecified" /> Eigenschaft gibt einen booleschen Wert, der angibt, ob die <see cref="P:ExchangeWebServices.FolderType.UnreadCount" /> Eigenschaft wird in die SOAP-Anforderung serialisiert. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.FolderType.UnreadCountSpecified" /> -Eigenschaft gibt <b>true</b> zurück, wenn die <see cref="P:ExchangeWebServices.FolderType.UnreadCount" /> Eigenschaft wird in die SOAP-Anforderung serialisiert die Eigenschaft andernfalls zurückgibt <b>"false"</b>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

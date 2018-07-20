@@ -1,0 +1,106 @@
+<Type Name="SubscribeResponseMessageType" FullName="ExchangeWebServices.SubscribeResponseMessageType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="ba4e381388b73aadbe551ef6dbdff9e14bc4f286" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606294" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class SubscribeResponseMessageType : ExchangeWebServices.ResponseMessageType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SubscribeResponseMessageType extends ExchangeWebServices.ResponseMessageType" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.SubscribeResponseMessageType" />
+  <TypeSignature Language="VB.NET" Value="Public Class SubscribeResponseMessageType&#xA;Inherits ResponseMessageType" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SubscribeResponseMessageType : ExchangeWebServices::ResponseMessageType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>ExchangeWebServices.ResponseMessageType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/messages")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.SubscribeResponseMessageType" /> Klasse enthält den Status und das Ergebnis einer einzelnen Subscribe-Anforderung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SubscribeResponseMessageType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.SubscribeResponseMessageType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SubscribeResponseMessageType();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.SubscribeResponseMessageType" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.SubscribeResponseMessageType" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionId">
+      <MemberSignature Language="C#" Value="public string SubscriptionId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubscriptionId" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.SubscribeResponseMessageType.SubscriptionId" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubscriptionId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SubscriptionId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.SubscribeResponseMessageType.SubscriptionId" /> -Eigenschaft dient zum Abrufen oder Festlegen des Bezeichners für ein Abonnement.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.SubscribeResponseMessageType.SubscriptionId" /> -Eigenschaft gibt eine Zeichenfolge, die den Bezeichner für das Abonnement enthält.</value>
+        <remarks>
+          <para>Die GUID, die die Abonnement-ID darstellt wird vom Client Access Server generiert, wenn das Abonnement erstellt wird.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Watermark">
+      <MemberSignature Language="C#" Value="public string Watermark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Watermark" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.SubscribeResponseMessageType.Watermark" />
+      <MemberSignature Language="VB.NET" Value="Public Property Watermark As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Watermark { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.SubscribeResponseMessageType.Watermark" /> Eigenschaft ruft ab oder legt ein Lesezeichen Ereignis in der Ereigniswarteschlange Postfach.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.SubscribeResponseMessageType.Watermark" /> -Eigenschaft gibt eine Zeichenfolge, die ein Ereignis Lesezeichen enthält.</value>
+        <remarks>
+          <para>Wenn die Subscribe-Anforderung ein Wasserzeichen enthält, wird das Abonnement aus der Wasserzeichen vorwärts erstellt. Wenn die Subscribe-Anforderung ein Wasserzeichen, die in der Tabelle Postfach Ereignisse nicht gefunden werden kann enthält, wird ein Fehler ErrorInvalidWatermark an die Clientanwendung zurückgegeben. Dieser Fehler kann auftreten, wenn das Wasserzeichen veraltet ist und aus dem 30-Tage-Fenster der Ereignistabelle entfernt wurde oder wenn das Wasserzeichen jemals nicht wurde in der Ereignistabelle. Dies kann beispielsweise auftreten, wenn ein Wasserzeichen aus ein anderes Abonnement für ein Postfach in einer anderen Datenbank abgerufen wird.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

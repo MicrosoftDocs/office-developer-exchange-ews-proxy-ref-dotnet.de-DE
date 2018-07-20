@@ -1,0 +1,119 @@
+<Type Name="ContactsViewType" FullName="ExchangeWebServices.ContactsViewType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="ecfc099cf1b48f0306ff6c59f229621cd6200504" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606384" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class ContactsViewType : ExchangeWebServices.BasePagingType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ContactsViewType extends ExchangeWebServices.BasePagingType" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.ContactsViewType" />
+  <TypeSignature Language="VB.NET" Value="Public Class ContactsViewType&#xA;Inherits BasePagingType" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ContactsViewType : ExchangeWebServices::BasePagingType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>ExchangeWebServices.BasePagingType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.ContactsViewType" /> Klasse stellt die Einstellungen, die verwendet werden, um Kontaktelemente basierend auf ihren Anzeigenamen alphabetische zurückzugeben.</summary>
+    <remarks>
+      <para>Dieser Typ ist nur in FindItem Vorgang Anforderungen verwendet.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContactsViewType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.ContactsViewType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ContactsViewType();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.ContactsViewType" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.ContactsViewType" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalName">
+      <MemberSignature Language="C#" Value="public string FinalName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FinalName" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.ContactsViewType.FinalName" />
+      <MemberSignature Language="VB.NET" Value="Public Property FinalName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FinalName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.ContactsViewType.FinalName" /> Eigenschaftensätze den Nachnamen in einer Kontaktliste in einer Antwort FindItem zurückgegeben. Diese Eigenschaft ist optional.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.ContactsViewType.FinalName" /> -Eigenschaft gibt den Namen des letzten Kontakts zurückgegeben.</value>
+        <remarks>
+          <para>Wenn die <see cref="P:ExchangeWebServices.ContactsViewType.FinalName" /> Eigenschaft nicht festgelegt ist, die Antwort enthält alle nachfolgenden Kontakte in der angegebenen Sortierreihenfolge. Ist der angegebene endgültige Name nicht in der Kontaktliste, wird der Name des nächsten alphabetische gemäß Definition durch die kulturellen Kontext ausgeschlossen werden.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialName">
+      <MemberSignature Language="C#" Value="public string InitialName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitialName" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.ContactsViewType.InitialName" />
+      <MemberSignature Language="VB.NET" Value="Public Property InitialName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ InitialName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.ContactsViewType.InitialName" /> -Eigenschaft festgelegt, wird der erste Name in einer Kontaktliste in einer Antwort FindItem zurückgegeben. Diese Eigenschaft ist optional.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.ContactsViewType.InitialName" /> -Eigenschaft gibt den Namen des ersten Kontakt zurückgegeben.</value>
+        <remarks>
+          <para>Wenn die <see cref="P:ExchangeWebServices.ContactsViewType.InitialName" /> Eigenschaft nicht festgelegt ist, die Antwort enthält eine Liste von Kontakten, die mit der erste Name in der Kontaktliste beginnt. Wenn der erste angegebene Namen nicht in der Kontaktliste auf den Namen des nächsten alphabetische ist, wie durch die kulturellen Kontext definiert zurückgegeben, mit Ausnahme von wird, wenn der nächste Name nach dem Namen, der vom angegeben ist die <see cref="P:ExchangeWebServices.ContactsViewType.FinalName" /> Eigenschaft.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

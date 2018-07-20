@@ -1,0 +1,280 @@
+<Type Name="DeleteItemType" FullName="ExchangeWebServices.DeleteItemType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="f7ed31368d2fa79f6b5a354ffb768d74fb40cbb2" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606813" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class DeleteItemType : ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit DeleteItemType extends ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.DeleteItemType" />
+  <TypeSignature Language="VB.NET" Value="Public Class DeleteItemType&#xA;Inherits BaseRequestType" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DeleteItemType : ExchangeWebServices::BaseRequestType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>ExchangeWebServices.BaseRequestType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/messages")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.DeleteItemType" /> -Klasse repräsentiert eine Anforderung zum Löschen von Elementen in einer Exchange-Datenbank.</summary>
+    <remarks>
+      <para>Die <see cref="T:ExchangeWebServices.DeleteItemType" /> Klasse wird verwendet, um Elemente aus dem Postfach eines Benutzers zu löschen. Beachten Sie das RemoveItem-Response-Objekt auf einer Besprechungsabsage sollte verwendet werden, um abgebrochen Besprechungen aus dem Postfach eines Benutzers zu entfernen.</para>
+      <para>Die Reihenfolge der Elemente, die durch angegeben ist die <see cref="P:ExchangeWebServices.DeleteItemType.ItemIds" /> -Eigenschaft bestimmt die Reihenfolge der Antwortnachrichten, die in der Antwort zurückgegeben werden. Dies bedeutet, dass das zweite Element, das gelöscht werden identifiziert wird die zweite Antwortnachricht zugeordnet werden. Eine Antwortnachricht wird erstellt, für jedes Element, das gelöscht werden soll.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>Das folgende Codebeispiel veranschaulicht die zwei Elemente zu löschen. Die gelöschten Elemente werden in den Ordner Gelöschte Objekte verschoben. Wenn das Element eine Aufgabe ist, wird nur für der angegebene Vorgang gelöscht. Wenn das Element einer Besprechung ist, wird an alle Teilnehmer ein Besprechungsabsage gesendet.</para>
+      <code>static void DeleteItem(ExchangeServiceBinding esb)
+{ 
+    // Create the request.
+    DeleteItemType &lt;span class="label"&gt;request&lt;/span&gt; = new DeleteItemType();
+
+    // Identify the items to delete.
+    ItemIdType[] items = new ItemIdType[2];
+    items[0] = new ItemIdType();
+    items[0].Id = "AAAlAE1BQG1";
+    items[1] = new ItemIdType();
+    items[1].Id = "AAAlAE1BQG2";
+    &lt;span class="label"&gt;request&lt;/span&gt;.ItemIds = items;
+
+    // Identify how deleted items are handled.
+    &lt;span class="label"&gt;request&lt;/span&gt;.DeleteType = DisposalType.MoveToDeletedItems;
+
+    // Identify how tasks are deleted.
+    &lt;span class="label"&gt;request&lt;/span&gt;.AffectedTaskOccurrences = AffectedTaskOccurrencesType.SpecifiedOccurrenceOnly;
+    &lt;span class="label"&gt;request&lt;/span&gt;.AffectedTaskOccurrencesSpecified = true;
+
+    // Identify how meeting cancellations are handled.
+    &lt;span class="label"&gt;request&lt;/span&gt;.SendMeetingCancellations = CalendarItemCreateOrDeleteOperationType.SendOnlyToAll;
+    &lt;span class="label"&gt;request&lt;/span&gt;.SendMeetingCancellationsSpecified = true;
+
+    try
+    {
+        // Send the response and receive the request.
+        DeleteItemResponseType response = esb.DeleteItem(&lt;span class="label"&gt;request&lt;/span&gt;);
+        ArrayOfResponseMessagesType aormt = response.ResponseMessages;
+        ResponseMessageType[] rmta = aormt.Items;
+
+        // Check each response message.
+        foreach (ResponseMessageType rmt in rmta)
+        {
+            if (rmt.ResponseClass == ResponseClassType.Success)
+            {
+                Console.WriteLine("Deleted item.");
+            }
+        }
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeleteItemType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.DeleteItemType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; DeleteItemType();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.DeleteItemType" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.DeleteItemType" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedTaskOccurrences">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.AffectedTaskOccurrencesType AffectedTaskOccurrences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ExchangeWebServices.AffectedTaskOccurrencesType AffectedTaskOccurrences" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrences" />
+      <MemberSignature Language="VB.NET" Value="Public Property AffectedTaskOccurrences As AffectedTaskOccurrencesType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::AffectedTaskOccurrencesType AffectedTaskOccurrences { ExchangeWebServices::AffectedTaskOccurrencesType get(); void set(ExchangeWebServices::AffectedTaskOccurrencesType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.AffectedTaskOccurrencesType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrences" /> -Eigenschaft ruft ab oder legt einen-Enumerationswert ab, der angibt, ob eine Aufgabeninstanz oder Aufgabe Master-Shape gelöscht wird. Diese Eigenschaft ist erforderlich, wenn Vorgänge gelöscht werden. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrences" /> -Eigenschaft gibt ein <see cref="T:ExchangeWebServices.AffectedTaskOccurrencesType" /> -Enumerationswert ab, der angibt, ob eine Aufgabeninstanz oder Aufgabe Master-Shape gelöscht wird.</value>
+        <remarks>
+          <para>Sie müssen festlegen, die <see cref="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrencesSpecified" /> -Eigenschaft auf <b>true</b> , damit die <see cref="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrences" /> Eigenschaft ist in der Anforderung (SOAP = Simple Object Access Protocol) serialisiert. Diese Eigenschaft muss nicht festgelegt werden, um Elemente zu löschen, die nicht der sind die <see cref="T:ExchangeWebServices.TaskType" /> Klasse.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedTaskOccurrencesSpecified">
+      <MemberSignature Language="C#" Value="public bool AffectedTaskOccurrencesSpecified { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AffectedTaskOccurrencesSpecified" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrencesSpecified" />
+      <MemberSignature Language="VB.NET" Value="Public Property AffectedTaskOccurrencesSpecified As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AffectedTaskOccurrencesSpecified { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrencesSpecified" /> -Eigenschaft dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob die <see cref="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrences" /> Eigenschaft ist in der Anforderung (SOAP = Simple Object Access Protocol) serialisiert. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrencesSpecified" /> -Eigenschaft gibt <b>true</b> zurück, wenn die <see cref="P:ExchangeWebServices.DeleteItemType.AffectedTaskOccurrences" /> Eigenschaft wird in die SOAP-Anforderung serialisiert die Eigenschaft andernfalls zurückgibt <b>"false"</b>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteType">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.DisposalType DeleteType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ExchangeWebServices.DisposalType DeleteType" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.DeleteItemType.DeleteType" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeleteType As DisposalType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::DisposalType DeleteType { ExchangeWebServices::DisposalType get(); void set(ExchangeWebServices::DisposalType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.DisposalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.DeleteItemType.DeleteType" /> -Eigenschaft dient zum Abrufen oder festlegen einen-Enumerationswert ab, der beschreibt, wie ein Element gelöscht wird. Diese Eigenschaft ist erforderlich. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.DeleteItemType.DeleteType" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.DisposalType" /> -Enumeration, die beschreibt, wie ein Element gelöscht wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIds">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.BaseItemIdType[] ItemIds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.BaseItemIdType[] ItemIds" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.DeleteItemType.ItemIds" />
+      <MemberSignature Language="VB.NET" Value="Public Property ItemIds As BaseItemIdType()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;ExchangeWebServices::BaseItemIdType ^&gt; ^ ItemIds { cli::array &lt;ExchangeWebServices::BaseItemIdType ^&gt; ^ get(); void set(cli::array &lt;ExchangeWebServices::BaseItemIdType ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("RecurringMasterItemIdRanges", typeof(ExchangeWebServices.RecurringMasterItemIdRangesType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("OccurrenceItemId", typeof(ExchangeWebServices.OccurrenceItemIdType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("ItemId", typeof(ExchangeWebServices.ItemIdType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("RecurringMasterItemId", typeof(ExchangeWebServices.RecurringMasterItemIdType), IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.BaseItemIdType[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.DeleteItemType.ItemIds" /> Eigenschaft ruft ab oder legt die Auflistung der zu löschenden Elemente. Diese Eigenschaft ist erforderlich. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.DeleteItemType.ItemIds" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.BaseItemIdType" /> Array, das die IDs der zu löschenden Elemente enthält.</value>
+        <remarks>
+          <para>Die <see cref="P:ExchangeWebServices.DeleteItemType.ItemIds" /> -Eigenschaft wird festgelegt, mit einer <see cref="T:ExchangeWebServices.ItemIdType" /> Typ.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMeetingCancellations">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.CalendarItemCreateOrDeleteOperationType SendMeetingCancellations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ExchangeWebServices.CalendarItemCreateOrDeleteOperationType SendMeetingCancellations" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" />
+      <MemberSignature Language="VB.NET" Value="Public Property SendMeetingCancellations As CalendarItemCreateOrDeleteOperationType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::CalendarItemCreateOrDeleteOperationType SendMeetingCancellations { ExchangeWebServices::CalendarItemCreateOrDeleteOperationType get(); void set(ExchangeWebServices::CalendarItemCreateOrDeleteOperationType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.CalendarItemCreateOrDeleteOperationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> -Eigenschaft dient zum Abrufen oder festlegen eine Enumeration, die beschreibt, wie Absagen für gelöschte Besprechungen behandelt werden. Diese Eigenschaft ist für Kalender Element Löschvorgänge erforderlich. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.CalendarItemCreateOrDeleteOperationType" /> -Enumerationswert ab, der darstellt wie gelöschte Besprechung absagen verarbeitet werden.</value>
+        <remarks>
+          <para>Sie müssen festlegen, die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellationsSpecified" /> -Eigenschaft auf <b>true</b> , damit die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> Eigenschaft ist in der Anforderung (SOAP = Simple Object Access Protocol) serialisiert.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMeetingCancellationsSpecified">
+      <MemberSignature Language="C#" Value="public bool SendMeetingCancellationsSpecified { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SendMeetingCancellationsSpecified" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellationsSpecified" />
+      <MemberSignature Language="VB.NET" Value="Public Property SendMeetingCancellationsSpecified As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SendMeetingCancellationsSpecified { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellationsSpecified" /> -Eigenschaft dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> Eigenschaft wird in der Anforderung (SOAP = Simple Object Access Protocol) serialisiert. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellationsSpecified" /> -Eigenschaft gibt <b>true</b> zurück, wenn die <see cref="P:ExchangeWebServices.DeleteItemType.SendMeetingCancellations" /> Eigenschaft wird in die SOAP-Anforderung serialisiert die Eigenschaft andernfalls zurückgibt <b>"false"</b>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,114 @@
+<Type Name="CreateManagedFolderRequestType" FullName="ExchangeWebServices.CreateManagedFolderRequestType">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="a1b88227f4363e3000fcf457328b3dc7721618a7" />
+    <Meta Name="ms.sourcegitcommit" Value="09f9993d313d1e3ec77e21f70573b3fced6eea2e" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="de-DE" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20606131" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public class CreateManagedFolderRequestType : ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CreateManagedFolderRequestType extends ExchangeWebServices.BaseRequestType" />
+  <TypeSignature Language="DocId" Value="T:ExchangeWebServices.CreateManagedFolderRequestType" />
+  <TypeSignature Language="VB.NET" Value="Public Class CreateManagedFolderRequestType&#xA;Inherits BaseRequestType" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CreateManagedFolderRequestType : ExchangeWebServices::BaseRequestType" />
+  <AssemblyInfo>
+    <AssemblyName>EWS</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>ExchangeWebServices.BaseRequestType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CodeDom.Compiler.GeneratedCode("wsdl", "2.0.50727.3038")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlType(Namespace="http://schemas.microsoft.com/exchange/services/2006/messages")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:ExchangeWebServices.CreateManagedFolderRequestType" /> -Klasse repräsentiert eine Anforderung zum Hinzufügen eines verwalteten Ordners an ein Postfach.</summary>
+    <remarks>
+      <para>Verwaltete Ordner werden auf dem Computer erstellt, auf dem Microsoft Exchange Server 2007 ausgeführt wird. Um ein Postfach programmgesteuert verwaltete benutzerdefinierte Ordnern hinzuzufügen, verwenden Sie die <see cref="T:ExchangeWebServices.CreateManagedFolderRequestType" /> Klasse. Sie können nur verwaltete Ordner hinzufügen, wenn Sie ein verwalteter Ordner mithilfe der Exchange-Verwaltungskonsole oder Exchange-Verwaltungsshell bereits definiert wurde. Der Vorgang CreateManagedFolder erstellt eine Instanz eines verwalteten Ordners basierend auf einer Vorlage verwaltete Ordner, die bereits in den Active Directory-Verzeichnisdienst.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>Ein Beispiel zur Verwendung der <see cref="T:ExchangeWebServices.CreateManagedFolderRequestType" /> Klasse, finden Sie unter verwaltete Ordner hinzufügen. Eine vollständige Beispiel, das Sie wie verwaltete Ordner aus einer Anwendung implementiert wird, finden Sie unter <a href="http://go.microsoft.com/fwlink/?LinkID=82742">Managed Ordner Selektor Sample</a></para>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CreateManagedFolderRequestType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ExchangeWebServices.CreateManagedFolderRequestType.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CreateManagedFolderRequestType();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="T:ExchangeWebServices.CreateManagedFolderRequestType" /> Konstruktor initialisiert eine neue Instanz des der <see cref="T:ExchangeWebServices.CreateManagedFolderRequestType" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FolderNames">
+      <MemberSignature Language="C#" Value="public string[] FolderNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] FolderNames" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.CreateManagedFolderRequestType.FolderNames" />
+      <MemberSignature Language="VB.NET" Value="Public Property FolderNames As String()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ FolderNames { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlArrayItem("FolderName", IsNullable=false, Namespace="http://schemas.microsoft.com/exchange/services/2006/types")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.CreateManagedFolderRequestType.FolderNames" /> -Eigenschaft dient zum Abrufen oder ein Array von verwalteten Ordnern hinzufügen zu einem Postfach festgelegt. Diese Eigenschaft ist erforderlich. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.CreateManagedFolderRequestType.FolderNames" /> -Eigenschaft gibt ein Zeichenfolgenarray mit den Namen der verwalteten Ordner ein Postfach hinzu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mailbox">
+      <MemberSignature Language="C#" Value="public ExchangeWebServices.EmailAddressType Mailbox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class ExchangeWebServices.EmailAddressType Mailbox" />
+      <MemberSignature Language="DocId" Value="P:ExchangeWebServices.CreateManagedFolderRequestType.Mailbox" />
+      <MemberSignature Language="VB.NET" Value="Public Property Mailbox As EmailAddressType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property ExchangeWebServices::EmailAddressType ^ Mailbox { ExchangeWebServices::EmailAddressType ^ get(); void set(ExchangeWebServices::EmailAddressType ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>EWS</AssemblyName>
+        <AssemblyVersion>0.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ExchangeWebServices.EmailAddressType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:ExchangeWebServices.CreateManagedFolderRequestType.Mailbox" /> -Eigenschaft dient zum Abrufen oder festlegen die e-Mail-Adresse des Postfachs in der verwalteten Ordner hinzugefügt werden. Diese Eigenschaft ist optional. Dies ist eine Lese-Schreib-Eigenschaft.</summary>
+        <value>Die <see cref="P:ExchangeWebServices.CreateManagedFolderRequestType.Mailbox" /> -Eigenschaft gibt eine <see cref="T:ExchangeWebServices.EmailAddressType" /> Objekt.</value>
+        <remarks>
+          <para>Diese Eigenschaft ist erforderlich, wenn Sie ein Postfach an ein anderes Konto hinzufügen möchten, während Sie Exchange-Identitätswechsel verwenden.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
